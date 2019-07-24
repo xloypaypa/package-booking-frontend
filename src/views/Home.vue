@@ -1,9 +1,11 @@
 <template>
   <div class="home">
     <h1>欢迎使用候鸟驿站</h1>
-    <input placeholder="请输入运单号……"/>
+    <a-input placeholder="请输入运单号……"/>
     <div>
-      <button>搜索</button>
+      <a-button :size="size" style="border-color: red; color: red;" shape="circle">
+        <small><b>搜索</b></small>
+      </a-button>
     </div>
   </div>
 </template>
@@ -12,7 +14,10 @@
 
 export default {
   name: 'home',
-  components: {
+  data: function () {
+    return {
+      size: 'large'
+    }
   }
 }
 </script>
