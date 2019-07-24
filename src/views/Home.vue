@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div id="home" class="home">
     <h1>欢迎使用候鸟驿站</h1>
     <a-input placeholder="请输入运单号……"/>
     <div>
@@ -21,3 +21,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  #home {
+    text-align: center;
+  }
+</style>
