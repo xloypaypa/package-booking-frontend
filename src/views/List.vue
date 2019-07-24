@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>候鸟驿站</h1>
     <PackageTable/>
   </div>
 </template>

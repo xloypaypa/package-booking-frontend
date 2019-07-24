@@ -1,11 +1,21 @@
 <template>
-  <a-table bordered :dataSource="dataSource" :columns="columns">
-  </a-table>
+  <div>
+    <div>
+      <h1 style="float: left">候鸟驿站</h1>
+      <PackageListFilter style="float: right"/>
+    </div>
+    <a-table bordered :dataSource="dataSource" :columns="columns"/>
+  </div>
 </template>
 
 <script>
+  import PackageListFilter from "./PackageListFilter";
+
   export default {
     name: "PackageTable",
+    components: {
+      PackageListFilter
+    },
     data() {
       return {
 
