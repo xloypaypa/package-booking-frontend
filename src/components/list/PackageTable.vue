@@ -1,19 +1,24 @@
 <template>
   <div>
-    <div>
-      <h1 >候鸟驿站</h1>
-      <PackageListFilter />
-    </div>
+
+    <a-row>
+      <a-col :span="8"><h1 >候鸟驿站</h1></a-col>
+      <a-col :span="8" :offset="8"><PackageListFilter /></a-col>
+    </a-row>
     <a-table bordered :dataSource="dataSource" :columns="columns"/>
   </div>
 </template>
 
 <script>
   import PackageListFilter from "./PackageListFilter";
+  import ACol from "ant-design-vue/es/grid/Col";
+  import ARow from "ant-design-vue/es/grid/Row";
 
   export default {
     name: "PackageTable",
     components: {
+      ARow,
+      ACol,
       PackageListFilter
     },
     data() {
