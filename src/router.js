@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import List from './views/List.vue'
+import PackageDetails from "./views/PackageDetails";
 
 Vue.use(Router)
 
@@ -18,6 +19,11 @@ export default new Router({
       path: '/list',
       name: 'list',
       component: List
+    },
+    {
+      path: '/package-details',
+      name: 'packageDetails',
+      component: PackageDetails
     }
   ]
 })
