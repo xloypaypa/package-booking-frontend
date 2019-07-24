@@ -1,8 +1,8 @@
 <template>
   <div>
     <div>
-      <h1 style="float: left">候鸟驿站</h1>
-      <PackageListFilter style="float: right"/>
+      <h1 >候鸟驿站</h1>
+      <PackageListFilter />
     </div>
     <a-table bordered :dataSource="dataSource" :columns="columns"/>
   </div>

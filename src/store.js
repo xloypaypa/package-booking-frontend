@@ -6,6 +6,9 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    filter: function(packages) {
+      return packages;
+    },
     packages: [
       {
         id: '201907210003',
@@ -33,9 +36,13 @@ export default new Vuex.Store({
   },
   getters: {
     getPackages: state => () => {
-      return state.packages;
+      return state.filter(state.packages);
     }
   },
-  mutations: {},
+  mutations: {
+    updateFilter: (state, filter) => {
+      state.filter = filter;
+    }
+  },
   actions: {}
 })
