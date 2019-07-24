@@ -1,15 +1,33 @@
 <template>
   <div id="package-details">
-    <div>
-      <h1>包裹详情</h1>
-      <a-input class="package-details" addonBefore="运单号："/>
-      <a-input class="package-details" addonBefore="收件人："/>
-      <a-input class="package-details" addonBefore="电话："/>
-      <a-input class="package-details" addonBefore="类型："/>
-    </div>
-    <div>
-      <a-button>预约取件</a-button>
-    </div>
+    <h1>包裹详情</h1>
+    <a-row class="package-details">
+      <a-col :span="4">
+        <h3>运单编号：</h3>
+      </a-col>
+      <a-col :span="20">
+        <a-input class="package-details"/>
+      </a-col>
+    </a-row>
+    <a-row class="package-details">
+      <a-col :span="4">
+        <h3>预约日期：</h3>
+      </a-col>
+      <a-col :span="10">
+        <a-date-picker style="width: 100%"/>
+      </a-col>
+      <a-col :span="10" style="padding-left: 10px">
+        <a-time-picker style="width: 100%" format="HH:mm" />
+      </a-col>
+    </a-row>
+    <a-row class="package-details">
+      <a-col :offset="5" :span="6">
+        <a-button style="width: 100%">预约取件</a-button>
+      </a-col>
+      <a-col :offset="2" :span="6">
+        <a-button style="width: 100%">取消</a-button>
+      </a-col>
+    </a-row>
   </div>
 </template>
 
@@ -19,7 +37,7 @@
 
   export default {
     name: "NewPackage",
-    components: {ACol, ARow}
+    components: {ACol, ARow},
   }
 </script>
 
